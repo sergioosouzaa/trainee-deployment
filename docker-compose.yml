@@ -1,0 +1,11 @@
+version: '3'
+services:
+  app:
+    # dockerfile: https://github.com/fabiosammy/rails-docker-images/blob/7.0.8/Dockerfile
+    image: fabiosammy/rails:7.0.8
+    command: bundle exec rails s -b 0.0.0.0
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/var/www/app
+
